@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:gray;">
+    <h1>node_preparation-02</h1>
+
+    <h2>Q.1 How do you create a simple Express.js application?</h2>
+    <h3>Express is a minimal and flexible web framework for Node.js. Express provides a set of features suitable for building web applications.
+              In addition, Express provides HTTP utilities that allow you to develop APIs quickly and easily. It’s also suitable for creating API for mobile applications. <br>
+        
+        <pre>const express = require('express')
+            const app = express()
+            const port = 3000
+            
+            app.get('/', (req, res) => {
+              res.send('Hello World!')
+            })
+            
+            app.listen(port, () => {
+              console.log(`Example app listening on port ${port}`)
+            })</pre></h3>
+-------------------------------------------------------------------------------------------------------
+    <h2>Q.2 Implementation of all type of exports in backend application</h2>
+    <h3>
+        <pre>   Default export
+        // import
+       import MyDefaultComponent from "./MyDefaultExport";
+        // export
+       const MyComponent = () => {}
+      export default MyComponent;</pre></h3>
+
+    <h2>Q.3 Create a middleware which will be applicable to all the routes</h2>
+    <h3><pre>app.use(middleware)
+
+        app.get('/',(req,res)=>{
+            res.send(`i am home page `)
+            res.end();
+        })</pre></h3>
+    <h2>Q.4 Implement CORS.</h2>
+    <h3>CORS stands for Cross-Origin Resource Sharing. It allows us to relax the security applied to an API. This is done by bypassing the Access-Control-Allow-Origin headers, which specify which origins can access the API. <br>
+        <img src="https://i0.wp.com/www.section.io/engineering-education/how-to-use-cors-in-nodejs-with-express/same-origin.jpg?w=810&ssl=1" alt="">
+    </h3>
+</body>
+</html>
